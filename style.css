@@ -510,6 +510,8 @@ body {
 .ebooks-header p {
     font-size: 1.2rem;
     color: #555;
+    margin-bottom: 20px;
+
 }
 
 .ebooks-categories {
@@ -552,6 +554,17 @@ body {
     font-size: 1rem;
     color: #555;
     padding: 0 15px 20px;
+}
+.categories-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden; /* Hide overflow for sliding effect */
+}
+.categories-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
 }
 
 
@@ -623,12 +636,16 @@ body {
 
 /* PDF Item Styles */
 .pdf-item {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9;
     padding: 15px;
     border-radius: 10px;
     text-align: left;
     min-width: 150px; /* Minimum width for each PDF item */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    flex: 0 0 100%; /* Each PDF takes full width */
+    text-align: center;
+    padding: 20px;
+
 }
 
 .pdf-item:hover {
@@ -637,17 +654,22 @@ body {
 }
 
 .pdf-item a {
-    color: #333;
+    /* color: #333;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 10px; */
+    display: block;
+    color: #0073e6;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .pdf-item a i {
     color: #ff0000; /* Red color for PDF icon */
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .pdf-item a span {
@@ -942,6 +964,29 @@ body {
     font-size: 0.8rem;
     color: #0073e6;
 }
+/* Livestream Section Styles */
+.livestream-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.livestream-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.livestream-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.livestream-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
     .navbar-menu {
@@ -1233,7 +1278,24 @@ body {
         padding: 8px 16px;
     }
 }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .livestream-container {
+        width: 100%;
+    }
 
+    iframe {
+        width: 100%;
+        height: 200px; /* Adjust height for smaller screens */
+ 
+    }
+    .livestream-section h2{
+        font-size: 1.5rem;
+    }
+    .livestream-section p{
+        font-size: 1rem;
+    }
+}
 
 
 /* Content below the navbar */
